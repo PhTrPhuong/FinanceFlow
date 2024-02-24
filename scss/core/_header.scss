@@ -1,0 +1,165 @@
+.header {
+    max-width: var(--max-width-page);
+    @include size(100%, var(--height-header));
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    @include transition(background-color var(--duration));
+    @include transition-timing-function(linear);
+
+    .container {
+        height: 100%;
+        @include dflexObj(flex, center, space-between);
+    }
+
+    &__left {
+        display: flex;
+        gap: 51px;
+        &-logo {
+            width: var(--w-logo);
+            display: flex;
+        }
+        &-menu {
+            display: flex;
+            li {
+                display: flex;
+                align-items: center;
+                a {
+                    padding: 0px 14px;
+                    display: inline-block;
+                    // @include transition(var(--duration));
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        @include size(100%, 1px);
+                        background-color: var(--white-cl);
+                        @include transform(scaleX(0));
+                        @include transform-origin(right);
+                        @include transition(transform var(--duration));
+                        @include transition-timing-function(ease);
+                    }
+                    &:hover::after,
+                    &.--active::after {
+                        @include transform(scaleX(1));
+                        @include transform-origin(left);
+                    }
+                }
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                border-left: 1px solid var(--blue-light-cl);
+                height: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+                left: calc(var(--w-logo) + var(--pd-container) + 32px);
+            }
+        }
+    }
+
+    &__right {
+        .btnmenu {
+            display: none;
+            @include size(45px);
+            @include border-radius(100%);
+            background: var(--main-cl);
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            @include transition(var(--duration));
+
+            &::before,
+            span,
+            &::after {
+                content: "";
+                display: block;
+                @include size(25px, 2px);
+                background: var(--white-cl);
+                position: absolute;
+                @include transition(var(--duration));
+            }
+
+            &::before {
+                top: 0;
+                @include transform(rotate(0deg) translateY(12px));
+            }
+            span {
+                top: 50%;
+                @include transform(translateY(-50%));
+            }
+            &::after {
+                bottom: 0;
+                @include transform(rotate(0deg) translateY(-12px));
+            }
+
+            &.--active {
+                &::before {
+                    @include transform(rotate(45deg) translate(16px, 15px));
+                    @include transition(var(--duration));
+                }
+                span {
+                    opacity: 0;
+                    @include transition(var(--duration));
+                }
+                &::after {
+                    @include transform(rotate(-45deg) translate(15px, -15px));
+                    @include transition(var(--duration));
+                }
+            }
+        }
+    }
+
+    &.--bg-header {
+        background: rgb(0, 17, 106);
+        background: linear-gradient(
+            0deg,
+            rgba(0, 17, 106, 0.47102591036414565) 0%,
+            rgba(0, 17, 106, 0.835171568627451) 47%,
+            rgba(1, 7, 37, 1) 100%
+        );
+    }
+    &.--bg-header-m {
+        background-color: transparent;
+    }
+
+    @include md {
+        &__left {
+            &-menu {
+                li {
+                    a {
+                        padding: 0px 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include sm {
+        &__left {
+            .header__left-menu {
+                display: none;
+            }
+        }
+        &__right {
+            .btnmain {
+                display: none;
+            }
+            .btnmenu {
+                display: flex;
+            }
+        }
+    }
+
+    @include xs {
+        &__left {
+            .header__left-logo {
+                width: 136px;
+            }
+        }
+    }
+}

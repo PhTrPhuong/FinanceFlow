@@ -1,0 +1,47 @@
+html {
+    font-size: 62.5%; // 1rem = 10px
+    @include sm {
+        font-size: 54%;
+    }
+    @include xs {
+        font-size: 62.5%;
+    }
+    @include xxxs {
+        font-size: 50%;
+    }
+}
+
+body {
+    width: 100%;
+    max-width: var(--max-width-page);
+    margin: 0 auto;
+    background-color: var(--blue-dark-cl);
+    position: relative;
+    @include text(var(--white-cl), var(--fs-body-text), var(--font-body), var(--lh-body-text), var(--ls-body-text));
+    overflow-x: hidden;
+    @include customscroll;
+    &.--disable-scroll {
+        height: 100vh;
+        overflow: hidden;
+        @include transition(var(--duration));
+    }
+    .container {
+        width: 100%;
+        max-width: var(--max-width-container);
+        padding-left: var(--pd-container);
+        padding-right: var(--pd-container);
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+    .main {
+        position: relative;
+        // overflow: hidden;
+    }
+    @include xs {
+        .container {
+            padding-left: var(--pd-container);
+            padding-right: var(--pd-container);
+        }
+    }
+}

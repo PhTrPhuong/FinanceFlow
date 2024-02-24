@@ -1,0 +1,107 @@
+.tokenspage {
+    .sctitle {
+        padding-top: calc(var(--height-header) + 60px);
+        padding-bottom: 101px;
+        .textbox {
+            max-width: 560px;
+        }
+
+        @include sm {
+            padding-top: calc(var(--height-header) + 48px);
+            padding-bottom: 48px;
+        }
+
+        @include xxs {
+            .textbox {
+                text-align: initial;
+            }
+        }
+    }
+
+    .sctokens {
+        padding-bottom: 120px;
+
+        &_item {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 118px;
+            align-items: center;
+            gap: var(--gap);
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        &_row {
+            &-title {
+                @include text(var(--white-cl), 1.6rem, var(--font-body-bold), 1.8rem, 1px, uppercase);
+            }
+
+            &-name {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                .icon {
+                    display: flex;
+                    flex-shrink: 0;
+                }
+                .text {
+                    @include text(var(--white-cl), 1.8rem, var(--font-body-bold), 2rem, normal);
+                }
+                .tag {
+                    @include border-radius(1000px);
+                    padding: 7px 8px;
+                    background: var(--blue-light-cl);
+                    @include mid(true);
+                    @include text(var(--white-cl), 1.2rem, var(--font-body-bold), 1.2rem, 0.6px, uppercase);
+                }
+            }
+            &-marketcap {
+                font-family: var(--font-body-bold);
+            }
+            &-volume {
+                font-family: var(--font-body-bold);
+            }
+            &-website {
+                text-decoration: underline;
+                @include transition(var(--duration));
+                &:hover {
+                    text-decoration: none;
+                    color: var(--main-cl);
+                }
+            }
+        }
+
+        &_row {
+            &-mobile {
+                padding: 32px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                .sctokens_row-title {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+
+        @include md {
+            &_row {
+                &-name {
+                    gap: 10px;
+                }
+            }
+        }
+
+        @include sm {
+            padding-bottom: 80px;
+            .sctokenspc {
+                display: none;
+            }
+            .sctokensmobile {
+                display: block;
+            }
+
+            &_row {
+                &-name {
+                    gap: 16px;
+                }
+            }
+        }
+    }
+}

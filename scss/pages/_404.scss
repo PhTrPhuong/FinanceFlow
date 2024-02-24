@@ -1,0 +1,47 @@
+.notfoundpage {
+    .scnotfound {
+        height: 100vh;
+        min-height: 100%;
+        min-width: 100%;
+        .container {
+            @include mid(true);
+            padding-top: var(--height-header);
+            @include size(100%);
+            max-width: 586px;
+        }
+
+        .textbox {
+            .text {
+                @include text(var(--main-cl), 180px, var(--font-body-bold), 160px, normal);
+                margin-bottom: 15px;
+            }
+            .btngroup {
+                margin-top: 40px;
+                gap: 24px;
+            }
+
+            @include xxs {
+                .text {
+                    font-size: 120px;
+                    line-height: 120px;
+                    margin-bottom: 32px;
+                }
+                .btngroup {
+                    margin-top: 32px;
+                    gap: var(--gap);
+                }
+            }
+
+            @include xxxs {
+                .text {
+                    font-size: 80px;
+                    line-height: 80px;
+                    margin-bottom: 0px;
+                }
+                .btngroup {
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+}

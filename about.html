@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinanceFlow - About</title>
+
+    <meta name="title" content="FinanceFlow - CFD Circle" />
+    <meta name="description"
+        content="FinanceFlow là dự án được hoàn thành trong khoá học lập trình front-end Web Responsive tại CFD Circle" />
+    <meta name="keyword" content="" />
+    <meta name="author" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Tránh trùng lặp nội dung -->
+    <link rel="canonical" href="https://cfdcircle.vn" />
+
+    <!-- Meta Tag Facebook -->
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="FinanceFlow - CFD Circle | Đào tạo lập trình thực chiến" />
+    <meta property="og:description"
+        content="FinanceFlow là dự án được hoàn thành trong khoá học lập trình front-end Web Responsive tại CFD Circle" />
+    <meta property="og:url" content="https://cfdcircle.vn" />
+    <meta property="og:site_name" content="CFD Circle" />
+    <meta property="og:image" content="img/thumnail-facebook.jpg" />
+
+    <!-- Meta Tag Twitter -->
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:creator" content="" />
+
+    <!-- CSS Loadding -->
+    <style>
+        .loading {
+            width: 100%;
+            height: 100vh;
+            background: var(--blue-dark-cl);
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 1;
+            visibility: visible;
+            z-index: 900;
+        }
+
+        .loading.--hide {
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+        }
+
+        .loading .progressbar {
+            width: 160px;
+            height: 4px;
+            background: var(--main-cl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .loading .progressbar .progressbar__inner {
+            width: 0%;
+            height: 100%;
+            background: var(--white-cl);
+            position: absolute;
+        }
+
+        .loading .loading__percent {
+            color: var(--white-cl);
+            text-align: center;
+            margin-top: 13px;
+        }
+
+        @media screen and (max-width: 767.98px) {
+            .loading .progressbar {
+                width: 129px;
+            }
+        }
+    </style>
+
+    <!-- Nhúng file css vào trang html -->
+    <link rel="stylesheet" href="dest/style.min.css" />
+    <link rel="stylesheet" href="dest/fonts.css" />
+</head>
+
+<body class="aboutpage">
+    <!-- LOADING -->
+    <div class="loading">
+        <div class="progressbar">
+            <span class="progressbar__inner"></span>
+        </div>
+        <span class="loading__percent textbutton">0%</span>
+    </div>
+    <div class="progressbar-scroll"></div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header__left">
+                <!-- logo -->
+                <a href="./" class="header__left-logo">
+                    <img src="img/logo-financeflow.svg" alt="logo" />
+                </a>
+                <!-- menu -->
+                <ul class="header__left-menu">
+                    <li><a href="./" class="textmenu">Home</a></li>
+                    <li><a href="about.html" class="textmenu">About</a></li>
+                    <li><a href="pricing.html" class="textmenu">Pricing</a></li>
+                    <li><a href="tokens.html" class="textmenu">Tokens</a></li>
+                    <li><a href="blog.html" class="textmenu">Blog</a></li>
+                    <li><a href="contactus.html" class="textmenu">contact us</a></li>
+                </ul>
+            </div>
+            <div class="header__right">
+                <a href="https://cfdcircle.vn/" target="_blank" class="btnmain btn--small">
+                    Download App
+                </a>
+                <!-- btn mobile -->
+                <div class="btnmenu">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENU MOBILE -->
+    <nav class="menumobile --text-center">
+        <ul>
+            <li><a href="./" class="--active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="tokens.html">Tokens</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contactus.html">contact us</a></li>
+        </ul>
+        <a href="https://cfdcircle.vn/" class="btnmain --center">Download App</a>
+        <div class="blur">
+            <img src="img/blur-small-m.png" alt="blur">
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="main">
+        <!-- SECTION TITLE -->
+        <section class="sctitle">
+            <div class="container">
+                <div class="textbox --text-center">
+                    <h2 class="heading --h1">About Finance Flow</h2>
+                    <p class="desc --center">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aenean
+                        dis placerat. Scelerisque imperdiet vitae dolor non aliquam. Malesuada.
+                    </p>
+                </div>
+            </div>
+            <div class="blur">
+                <img src="img/blur-small.png" alt="blur" />
+            </div>
+        </section>
+
+        <!-- SECTION DRIVES -->
+        <section class="scdrives">
+            <div class="container">
+                <div class="textbox --row">
+                    <h2 class="heading --h2">What drives Finance Flow?</h2>
+                    <p class="desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.
+                    </p>
+                </div>
+
+                <div class="scdrives__list">
+                    <!-- item 1 -->
+                    <div class="scdrives__list-item">
+                        <div class="icon">
+                            <img src="img/icon-open-source.svg" alt="icon">
+                        </div>
+                        <div class="info">
+                            <h4 class="info__title textlabel --label-m">Open Source</h4>
+                            <p class="info__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et nibh urna
+                                in proin dui purus bibendum cras. Morbi cursus nunc.</p>
+                        </div>
+                    </div>
+                    <!-- item 2 -->
+                    <div class="scdrives__list-item">
+                        <div class="icon">
+                            <img src="img/icon-worldwide.svg" alt="icon">
+                        </div>
+                        <div class="info">
+                            <h4 class="info__title textlabel --label-m">worldwide</h4>
+                            <p class="info__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et nibh urna
+                                in proin dui purus bibendum cras. Morbi cursus nunc.</p>
+                        </div>
+                    </div>
+                    <!-- item 3 -->
+                    <div class="scdrives__list-item">
+                        <div class="icon">
+                            <img src="img/icon-transparent.svg" alt="icon">
+                        </div>
+                        <div class="info">
+                            <h4 class="info__title textlabel --label-m">Transparent</h4>
+                            <p class="info__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et nibh urna
+                                in proin dui purus bibendum cras. Morbi cursus nunc.</p>
+                        </div>
+                    </div>
+                    <!-- item 4 -->
+                    <div class="scdrives__list-item">
+                        <div class="icon">
+                            <img src="img/icon-community-driven.svg" alt="icon">
+                        </div>
+                        <div class="info">
+                            <h4 class="info__title textlabel --label-m">Community Driven</h4>
+                            <p class="info__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et nibh urna
+                                in proin dui purus bibendum cras. Morbi cursus nunc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION OUR MISSION -->
+        <section class="scourmission">
+            <div class="container">
+                <div class="scourmission__info">
+                    <div class="scourmission__info-item">
+                        <div class="textbox">
+                            <h2 class="heading --h2">Our mission</h2>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Parturient lorem purus justo,
+                                ultricies. Sollicitudin odio elementum urna placerat lacus, vulputate. Non malesuada
+                                viverra et ultrices cras. Tincidunt tempor, blandit augue ac feugiat. Praesent arcu
+                                tempus ullamcorper quisque in. Magna fermentum, lacus, fermentum arcu.
+                                <br><br>
+                                Vulputate pellentesque proin facilisis dignissim gravida sed faucibus nunc. Nunc eget
+                                pharetra, in vitae porta lacus. Elit in nisl, in quis nulla tellus suscipit id. Semper
+                                velit odio cras pretium tristique habitant. Elit eu penatibus congue orci turpis. Enim
+                                diam id.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="scourmission__info-item">
+                        <div class="textbox">
+                            <h2 class="heading --h2">Our story</h2>
+                            <p class="desc ">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Parturient lorem purus justo,
+                                ultricies. Sollicitudin odio elementum urna placerat lacus, vulputate. Non malesuada
+                                viverra et ultrices cras. Tincidunt tempor, blandit augue ac feugiat. Praesent arcu
+                                tempus ullamcorper quisque in. Magna fermentum, lacus, fermentum arcu.
+                                <br><br>
+                                Vulputate pellentesque proin facilisis dignissim gravida sed faucibus nunc. Nunc eget
+                                pharetra, in vitae porta lacus. Elit in nisl, in quis nulla tellus suscipit id. Semper
+                                velit odio cras pretium tristique habitant. Elit eu penatibus congue orci turpis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="scourmission__img">
+                    <img src="img/img-our.jpg" alt="img">
+                </div>
+                <div class="earth --hidden">
+                    <img srcset="img/earth.png 2x" alt="img earth" class="earth">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION TIMELINE -->
+        <section class="sctimeline">
+            <div class="container">
+                <div class="sctimeline__left">
+                    <div class="textbox">
+                        <h2 class="heading --h2">Timeline</h2>
+                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
+                            in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla,
+                            ut commodo diam libero vitae erat. </p>
+                    </div>
+                </div>
+                <div class="sctimeline__right">
+                    <!-- item 1 -->
+                    <div class="sctimeline__right-row">
+                        <div class="dot"></div>
+                        <div class="info">
+                            <div class="info__number">2014</div>
+                            <h3 class="info__title textlabel --label-m">Announcement</h3>
+                            <p class="info__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis
+                                vivamus at mattis bibendum congue cras id interdum. Risus leo et.</p>
+                        </div>
+                    </div>
+                    <!-- item 2 -->
+                    <div class="sctimeline__right-row">
+                        <div class="dot"></div>
+                        <div class="info">
+                            <div class="info__number">2016</div>
+                            <h3 class="info__title textlabel --label-m">Announcement</h3>
+                            <p class="info__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis
+                                vivamus at mattis bibendum congue cras id interdum. Risus leo et.</p>
+                        </div>
+                    </div>
+                    <!-- item 3 -->
+                    <div class="sctimeline__right-row">
+                        <div class="dot"></div>
+                        <div class="info">
+                            <div class="info__number">2018</div>
+                            <h3 class="info__title textlabel --label-m">Announcement</h3>
+                            <p class="info__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis
+                                vivamus at mattis bibendum congue cras id interdum. Risus leo et.</p>
+                        </div>
+                    </div>
+                    <!-- item 4 -->
+                    <div class="sctimeline__right-row">
+                        <div class="dot"></div>
+                        <div class="info">
+                            <div class="info__number">2022</div>
+                            <h3 class="info__title textlabel --label-m">Announcement</h3>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis vivamus
+                                at mattis bibendum congue cras id interdum. Risus leo et.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION OUR TEAM -->
+        <section class="scteam">
+            <div class="container">
+                <div class="textbox --row">
+                    <h2 class="heading --h2">Our Team</h2>
+                    <p class="desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Parturient lorem purus justo,
+                        ultricies.
+                    </p>
+                </div>
+                <div class="scteam__list">
+                    <div class="scteam__list-item">
+                        <div class="img">
+                            <img src="img/img-team-1.jpg" alt="team">
+                        </div>
+                        <div class="info">
+                            <h5 class="info__name textuser">John Carter</h5>
+                            <p class="info__other textuser">CEO & CO-Founder</p>
+                        </div>
+                    </div>
+                    <div class="scteam__list-item">
+                        <div class="img">
+                            <img src="img/img-team-2.jpg" alt="team">
+                        </div>
+                        <div class="info">
+                            <h5 class="info__name textuser">Sophie Moore</h5>
+                            <p class="info__other textuser">Community Lead</p>
+                        </div>
+                    </div>
+                    <div class="scteam__list-item">
+                        <div class="img">
+                            <img src="img/img-team-3.jpg" alt="team">
+                        </div>
+                        <div class="info">
+                            <h5 class="info__name textuser">Alex Turner</h5>
+                            <p class="info__other textuser">Operations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION COMPANY -->
+        <section class="sccompany">
+            <div class="container">
+                <div class="textbox --text-center --center">
+                    <h2 class="heading --h2">Investors</h2>
+                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Parturient lorem purus
+                        justo, ultricies.</p>
+                </div>
+                <div class="sccompany__list">
+                    <div class="sccompany__list-item">
+                        <img src="img/logo-company-1.svg" alt="company-1" />
+                    </div>
+                    <div class="sccompany__list-item">
+                        <img src="img/logo-company-2.svg" alt="company-2" />
+                    </div>
+                    <div class="sccompany__list-item">
+                        <img src="img/logo-company-3.svg" alt="company-3" />
+                    </div>
+                    <div class="sccompany__list-item">
+                        <img src="img/logo-company-4.svg" alt="company-4" />
+                    </div>
+                    <div class="sccompany__list-item">
+                        <img src="img/logo-company-5.svg" alt="company-5" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <a href="./" class="footer__top-logo">
+                    <img src="img/logo-financeflow.svg" alt="logo" />
+                </a>
+                <div class="socials">
+                    <a href="https://www.facebook.com/cfdcircle" target="_blank" class="icon">
+                        <img src="img/icon-instagram.svg" alt="instagram" />
+                    </a>
+                    <a href="https://www.facebook.com/cfdcircle" target="_blank" class="icon">
+                        <img src="img/icon-fb.svg" alt="facebook" />
+                    </a>
+                    <a href="https://www.facebook.com/cfdcircle" target="_blank" class="icon">
+                        <img src="img/icon-linked-in.svg" alt="linkedin" />
+                    </a>
+                </div>
+            </div>
+            <div class="footer__center">
+                <div class="footer__center-left">
+                    <h4 class="title textlabel --label-m">Menu</h4>
+                    <ul class="list">
+                        <li><a href="./" class="textmenu">Home</a></li>
+                        <li>
+                            <a href="about.html" class="textmenu">About</a>
+                        </li>
+                        <li>
+                            <a href="pricing.html" class="textmenu">
+                                Pricing
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tokens.html" class="textmenu">
+                                Tokens
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blog.html" class="textmenu">Blog</a>
+                        </li>
+                        <li>
+                            <a href="contactus.html" class="textmenu">
+                                contact us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__center-right">
+                    <div class="textbox">
+                        <h3 class="textlabel --label-m">Download our Application</h3>
+                        <p class="desc">
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Mauris sed nulla integer
+                        </p>
+                        <div class="btngroup --mt-24 --gap-16">
+                            <a href="#" class="btnmain --gap-6 --w-full --w-full-m" target="_blank">
+                                <svg width="23" height="28" viewBox="0 0 23 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1_28672)">
+                                        <path
+                                            d="M2.89196 24.0589C3.90895 25.5229 5.29949 27.5247 7.09357 27.5247V27.5212H7.18498C7.86984 27.4777 8.53946 27.2985 9.15543 26.9938H9.17267C9.95229 26.6126 10.8069 26.4128 11.6735 26.4091C12.5034 26.4182 13.3208 26.6135 14.0664 26.9808H14.0716C14.6946 27.297 15.38 27.4686 16.0774 27.483H16.1792C17.9841 27.456 19.1378 25.9391 20.3451 24.1093C21.1739 22.9142 21.8163 21.5984 22.25 20.2076V20.2006C21.5704 19.9123 20.9494 19.5 20.4184 18.9843C19.832 18.4268 19.3666 17.7531 19.0513 17.0055C18.7361 16.2579 18.578 15.4525 18.5868 14.6403C18.6038 13.5861 18.8836 12.5531 19.4003 11.6361C19.9169 10.7192 20.654 9.94782 21.5438 9.39272C20.9766 8.57776 20.2289 7.90699 19.3599 7.43351C18.4909 6.96002 17.5245 6.6968 16.537 6.66468C16.3724 6.64991 16.2249 6.64209 16.0989 6.64209C15.0096 6.71105 13.9425 6.98387 12.9523 7.4466H12.9316C12.4223 7.69534 11.8757 7.8574 11.3139 7.92618C10.7215 7.86295 10.1448 7.6944 9.61074 7.42836H9.59177C8.73578 7.01905 7.80992 6.7787 6.86419 6.72029H6.78658C5.63538 6.75676 4.51323 7.0933 3.52964 7.69705C2.54603 8.3008 1.73459 9.15114 1.17449 10.1651C0.0454163 12.4 -0.282374 14.9595 0.246607 17.41C0.663483 19.7825 1.5618 22.0428 2.88536 24.0494L2.89196 24.0589Z"
+                                            fill="white" />
+                                        <path
+                                            d="M11.1 6.344C11.1889 6.35197 11.2781 6.35546 11.3674 6.35443C12.0995 6.31719 12.8157 6.12494 13.4691 5.79023C14.1225 5.4555 14.6987 4.98582 15.1599 4.41178C16.1822 3.18276 16.6844 1.59846 16.5586 0C15.0035 0.163702 13.5668 0.911959 12.535 2.09555C11.5165 3.26402 11.0004 4.79218 11.1 6.344Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_28672">
+                                            <rect width="23" height="28" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                                App Store
+                            </a>
+                            <a href="#" class="btnmain --gap-6 --w-full --w-full-m" target="_blank">
+                                <svg width="23" height="26" viewBox="0 0 23 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1_28678)">
+                                        <path
+                                            d="M16.5186 16.5951L13.066 13.136L1.64111 24.7387C1.75032 24.6974 1.85619 24.6478 1.95776 24.5902L16.5186 16.5951Z"
+                                            fill="white" />
+                                        <path
+                                            d="M0.00850522 1.94011C0.0144238 3.35543 0.107148 22.2237 0.116026 23.4134C0.0902982 23.6611 0.125802 23.9113 0.219399 24.142C0.312996 24.3725 0.4618 24.5765 0.652648 24.7357L12.5668 12.6372L0.600367 0.643555C0.393848 0.785546 0.229684 0.981195 0.125431 1.20957C0.0211803 1.43795 -0.0192362 1.69047 0.00850522 1.94011Z"
+                                            fill="white" />
+                                        <path
+                                            d="M17.1585 8.98145L13.561 12.6345L17.1625 16.2421L22.1124 13.5234C22.7043 13.1957 23.3336 12.3604 22.1124 11.6923L17.1585 8.98145Z"
+                                            fill="white" />
+                                        <path
+                                            d="M1.95772 0.659347C1.7996 0.5753 1.62738 0.521278 1.44971 0.5L13.0631 12.1343L16.5156 8.62869L1.95772 0.659347Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_28678">
+                                            <rect width="23" height="25" fill="white" transform="translate(0 0.5)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                PLAY STORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__bottom-copyright textbodysmall">
+                    © 2023 CFD Circle, Inc.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <div class="backtotop">
+        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 18.9375L8 1.875M14.5 7.5625L8 1.0625L1.5 7.5625" stroke="white" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </div>
+
+    <script type="text/javascript" src="dest/jsmain.min.js"></script>
+    <script type="text/javascript" src="dest/main.js"></script>
+</body>
+
+</html>

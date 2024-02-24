@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinanceFlow - NotFound</title>
+
+    <meta name="title" content="FinanceFlow - CFD Circle" />
+    <meta name="description"
+        content="FinanceFlow là dự án được hoàn thành trong khoá học lập trình front-end Web Responsive tại CFD Circle" />
+    <meta name="keyword" content="" />
+    <meta name="author" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Tránh trùng lặp nội dung -->
+    <link rel="canonical" href="https://cfdcircle.vn" />
+
+    <!-- Meta Tag Facebook -->
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="FinanceFlow - CFD Circle | Đào tạo lập trình thực chiến" />
+    <meta property="og:description"
+        content="FinanceFlow là dự án được hoàn thành trong khoá học lập trình front-end Web Responsive tại CFD Circle" />
+    <meta property="og:url" content="https://cfdcircle.vn" />
+    <meta property="og:site_name" content="CFD Circle" />
+    <meta property="og:image" content="img/thumnail-facebook.jpg" />
+
+    <!-- Meta Tag Twitter -->
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:creator" content="" />
+
+    <!-- CSS Loadding -->
+    <style>
+        .loading {
+            width: 100%;
+            height: 100vh;
+            background: var(--blue-dark-cl);
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 1;
+            visibility: visible;
+            z-index: 900;
+        }
+
+        .loading.--hide {
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+        }
+
+        .loading .progressbar {
+            width: 160px;
+            height: 4px;
+            background: var(--main-cl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .loading .progressbar .progressbar__inner {
+            width: 0%;
+            height: 100%;
+            background: var(--white-cl);
+            position: absolute;
+        }
+
+        .loading .loading__percent {
+            color: var(--white-cl);
+            text-align: center;
+            margin-top: 13px;
+        }
+
+        @media screen and (max-width: 767.98px) {
+            .loading .progressbar {
+                width: 129px;
+            }
+        }
+    </style>
+
+    <!-- Nhúng file css vào trang html -->
+    <link rel="stylesheet" href="dest/style.min.css" />
+    <link rel="stylesheet" href="dest/fonts.css" />
+</head>
+
+<body class="notfoundpage">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header__left">
+                <!-- logo -->
+                <a href="./" class="header__left-logo">
+                    <img src="img/logo-financeflow.svg" alt="logo" />
+                </a>
+                <!-- menu -->
+                <ul class="header__left-menu">
+                    <li><a href="./" class="textmenu">Home</a></li>
+                    <li><a href="about.html" class="textmenu">About</a></li>
+                    <li><a href="pricing.html" class="textmenu">Pricing</a></li>
+                    <li><a href="tokens.html" class="textmenu">Tokens</a></li>
+                    <li><a href="blog.html" class="textmenu">Blog</a></li>
+                    <li><a href="contactus.html" class="textmenu">contact us</a></li>
+                </ul>
+            </div>
+            <div class="header__right">
+                <a href="https://cfdcircle.vn/" target="_blank" class="btnmain btn--small">
+                    Download App
+                </a>
+                <!-- btn mobile -->
+                <div class="btnmenu">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENU MOBILE -->
+    <nav class="menumobile --text-center">
+        <ul>
+            <li><a href="./" class="--active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="tokens.html">Tokens</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contactus.html">contact us</a></li>
+        </ul>
+        <a href="https://cfdcircle.vn/" class="btnmain --center">Download App</a>
+        <div class="blur">
+            <img src="img/blur-small-m.png" alt="blur">
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="main">
+        <section class="scnotfound">
+            <div class="container">
+                <div class="textbox --text-center">
+                    <h1 class="heading --h1 text">404</h1>
+                    <h2 class="heading --h2">Page Not Found</h2>
+                    <p class="desc --center">
+                        The page you're looking for can't be found. Double-check the URL and try again. Or click the
+                        button below.
+                    </p>
+                    <div class="btngroup --center">
+                        <a href="pricing.html" class="btnmain --w-full-m">
+                            View Pricing
+                        </a>
+                        <a href="./" class="btnmain btn--secondary --w-full-m">
+                            Go Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="dest/jsmain.min.js"></script>
+    <script type="text/javascript" src="dest/main.js"></script>
+</body>
+
+</html>

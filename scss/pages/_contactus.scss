@@ -1,0 +1,257 @@
+.contactuspage {
+    .main {
+        overflow: hidden;
+    }
+
+    /* SECTION GET IN TOUCH */
+    .scgetintouch {
+        padding-top: calc(var(--height-header) + 80px);
+        padding-bottom: 120px;
+
+        &__content {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 63px;
+            margin-top: 52px;
+
+            &-form {
+                grid-column: 1/9;
+                .formwrap {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 25px;
+                    row-gap: 32px;
+
+                    &__input {
+                        & > .formmsg {
+                            @include text(transparent, 1.8rem, var(--font-body), normal, normal);
+                        }
+
+                        input,
+                        textarea {
+                            height: 68px;
+                            width: 100%;
+                            padding: 20px 25px;
+                            outline: none;
+                            @include border-radius(100px);
+                            border: 1px solid #010725;
+                            background: var(--blue-light-cl);
+                            margin-top: 12px;
+                            @include text(var(--white-cl), 1.8rem, var(--font-body), 2.7rem, normal);
+                            @include placeholder {
+                                color: var(--white-cl);
+                            }
+                            &:focus {
+                                border-color: var(--main-cl);
+                            }
+                        }
+
+                        textarea {
+                            height: 162px;
+                            @include border-radius(14px);
+                            resize: none;
+                        }
+
+                        &-message {
+                            grid-column: 1/3;
+                        }
+
+                        &.--invalid {
+                            .formmsg {
+                                color: var(--red-cl);
+                            }
+                            input,
+                            textarea {
+                                border-color: var(--red-cl);
+                            }
+                        }
+                    }
+
+                    .btnmain {
+                        margin-top: 20px;
+                    }
+                }
+            }
+
+            &-info {
+                grid-column: 9/13;
+                .textbox {
+                    .desc {
+                        margin-top: 12px;
+                    }
+                    .iconlist {
+                        &__item {
+                            gap: 15px;
+                            &:not(:last-child) {
+                                margin-bottom: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .blurdark {
+            position: absolute;
+            top: 0;
+            right: -20%;
+            transform: translateY(-50%);
+            z-index: -1;
+            opacity: 0.6;
+            pointer-events: none;
+            @include xxs {
+                max-width: initial;
+                width: 1000px;
+                right: -100%;
+            }
+        }
+
+        @include md {
+            &__content {
+                gap: var(--gap);
+            }
+        }
+
+        @include sm {
+            padding-top: calc(var(--height-header) + 48px);
+            padding-bottom: 80px;
+            &__content {
+                grid-template-columns: 1fr;
+                gap: 48px;
+                &-form {
+                    grid-column: initial;
+                    .formwrap {
+                        .btnmain {
+                            margin-top: 0px;
+                        }
+                    }
+                }
+                &-info {
+                    grid-column: initial;
+                }
+            }
+        }
+
+        @include xxs {
+            &__content {
+                margin-top: 40px;
+                &-form {
+                    .formwrap {
+                        grid-template-columns: 1fr;
+                        gap: 24px;
+                        &__input {
+                            &-message {
+                                grid-column: initial;
+                            }
+                        }
+                        .btnmain {
+                            margin-top: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* SECTION FAQs */
+    .scaccordion {
+        padding-bottom: 120px;
+        &__inner {
+            max-width: 790px;
+            margin-left: auto;
+            margin-right: auto;
+            &-list {
+                margin-top: 80px;
+
+                .item {
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                    &__question {
+                        @include dflexObj(flex, center, space-between);
+                        padding: 32px 8px;
+                        background: transparent;
+                        @include transition(var(--duration));
+                        cursor: pointer;
+
+                        &-title {
+                            @include text(var(--white-cl), 2.8rem, var(--font-body), 2.9rem, 0.28px);
+                            @include transition(var(--duration));
+                        }
+                        &-icon {
+                            $w-line: 27px;
+                            @include size($w-line);
+                            @include mid(true);
+                            flex-shrink: 0;
+                            span {
+                                width: $w-line;
+                                height: 2px;
+                                display: block;
+                                @include border-radius(100px);
+                                background: var(--white-cl);
+                                position: relative;
+                                @include transition(var(--duration));
+                                &::after {
+                                    content: "";
+                                    width: 2px;
+                                    height: $w-line;
+                                    background: var(--white-cl);
+                                    @include mid;
+                                    @include transition(var(--duration));
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            .item__question-title {
+                                color: var(--main-cl);
+                            }
+                        }
+                    }
+
+                    &.--active {
+                        .item__question {
+                            &-icon {
+                                span {
+                                    &::after {
+                                        @include transform(translate(-50%, -50%) rotate(90deg));
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &__answer {
+                        background: transparent;
+                        max-height: 0;
+                        overflow: hidden;
+                        @include transition(max-height var(--duration));
+                        p {
+                            padding: 0 43px 32px 8px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include xxs {
+            padding-bottom: 106px;
+            &__inner {
+                &-list {
+                    margin-top: 32px;
+                    .item {
+                        &__question {
+                            padding: 24px 0px;
+                            &-title {
+                                font-size: 1.8rem;
+                            }
+                        }
+                        &__answer {
+                            p {
+                                padding: 0 0px 24px 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

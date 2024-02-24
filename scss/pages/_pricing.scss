@@ -1,0 +1,117 @@
+.pricingpage {
+    /* SECTION TITLE */
+    .sctitle {
+        padding-top: calc(var(--height-header) + 60px);
+        padding-bottom: 40px;
+        .textbox {
+            max-width: 560px;
+        }
+
+        @include sm {
+            padding-top: calc(var(--height-header) + 48px);
+        }
+
+        @include xxs {
+            .textbox {
+                text-align: initial;
+            }
+        }
+    }
+
+    /* SECTION ICON */
+    .scicon {
+        padding-bottom: 56px;
+        .container {
+            @include dflexObj(flex, center, space-between);
+        }
+        &__item {
+            @include mid(true);
+            gap: 24px;
+            &-icon {
+                display: flex;
+            }
+        }
+
+        @include sm {
+            .container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--gap);
+            }
+            &__item {
+                justify-content: flex-start;
+                gap: 20px;
+            }
+        }
+
+        @include xxs {
+            padding-bottom: 48px;
+            .container {
+                grid-template-columns: 1fr;
+            }
+            &__item {
+                gap: 18px;
+            }
+        }
+    }
+
+    /* SECTION PRICING */
+    .scpricing {
+        padding-bottom: 225px;
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--gap);
+        }
+        &__item {
+            @include border-radius(40px);
+            background: var(--blue-light-cl);
+            padding: 48px 30px 42px;
+
+            .textbox {
+                .tags {
+                    margin-bottom: 16px;
+                }
+            }
+
+            &-content {
+                margin-top: 40px;
+                ul {
+                    margin-top: 16px;
+                    li {
+                        position: relative;
+                        padding-left: 22px;
+                        &:not(:last-child) {
+                            margin-bottom: 16px;
+                        }
+
+                        &::before {
+                            content: "";
+                            display: block;
+                            @include size(6px);
+                            @include border-radius(1000px);
+                            background: var(--main-cl);
+                            @include midPositionY;
+                            left: 0px;
+                        }
+                    }
+                }
+            }
+
+            .btnmain {
+                margin-top: 54px;
+            }
+        }
+
+        @include sm {
+            padding-bottom: 120px;
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        @include xxs {
+            padding-bottom: 80px;
+        }
+    }
+}

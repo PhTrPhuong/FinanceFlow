@@ -1,0 +1,115 @@
+.menumobile {
+    @include visible(0);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    @include mid(true);
+    flex-direction: column;
+    background-color: var(--blue-dark-cl);
+    @include transition(background-color var(--duration));
+    @include transition-timing-function(linear);
+
+    ul {
+        li {
+            a {
+                @include text(
+                    var(--white-cl),
+                    var(--fs-text-menu-m),
+                    var(--font-body-bold),
+                    var(--lh-text-menu-m),
+                    var(--ls-text-menu-m),
+                    uppercase
+                );
+                display: inline-block;
+                padding: 20px 20px;
+                @include transition(var(--duration));
+
+                &::after {
+                    content: "";
+                    display: block;
+                    @include size(100%, 1px);
+                    background-color: var(--white-cl);
+                    @include transform(scaleX(0));
+                    @include transform-origin(right);
+                    @include transition(transform var(--duration));
+                    @include transition-timing-function(ease);
+                }
+                &:hover::after,
+                &.--active::after {
+                    @include transform(scaleX(1));
+                    @include transform-origin(left);
+                }
+            }
+        }
+    }
+
+    .btnmain {
+        margin-top: 12px;
+    }
+
+    .blur {
+        position: absolute;
+        @include mid;
+        z-index: -1;
+        max-width: initial;
+        width: 1000px;
+        pointer-events: none;
+    }
+
+    &.--show {
+        @include visible(1);
+    }
+
+    @include sm {
+        ul {
+            li {
+                a {
+                    padding: 30px 20px;
+                }
+            }
+        }
+        .btnmain {
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+
+    @include xs {
+        ul {
+            li {
+                a {
+                    padding: 20px 20px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        ul {
+            li {
+                a {
+                    padding: 12px 18px;
+                }
+            }
+        }
+        .btnmain {
+            height: 55px;
+            max-width: 250px;
+        }
+    }
+
+    @include landscape {
+        @include xs {
+            height: auto;
+            padding-top: 80px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        @media screen and (max-width: 320px) {
+            padding-top: 48px;
+        }
+    }
+}

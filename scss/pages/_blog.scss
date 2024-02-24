@@ -1,0 +1,134 @@
+.blogpage {
+    /* SECTION BLOG */
+    .scblog {
+        padding-top: calc(var(--height-header) + 70px);
+        padding-bottom: 92px;
+        .textbox {
+            .desc {
+                max-width: 570px;
+            }
+        }
+
+        @include sm {
+            .textbox {
+                display: initial;
+            }
+        }
+
+        @include xxs {
+            padding-top: calc(var(--height-header) + 48px);
+            padding-bottom: 80px;
+        }
+    }
+
+    /* SECTION LATEST POSTS */
+    .scposts {
+        padding: 148px 0 80px;
+
+        &__tabs {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+
+            li {
+                height: 40px;
+                padding: 0 24px;
+                border-radius: 80px;
+                background: rgba(255, 255, 255, 0.1);
+                @include mid(true);
+                cursor: pointer;
+                @include transition(var(--duration));
+
+                &:hover,
+                &.--active {
+                    background: var(--main-cl);
+                }
+            }
+        }
+
+        .thumb__list {
+            margin-top: 56px;
+            display: none;
+
+            &.--show {
+                display: grid;
+            }
+        }
+
+        .pagination {
+            margin-top: 26px;
+            @include mid(true);
+
+            &__prev,
+            &__next {
+                @include size(36px);
+                background-color: var(--blue-light-cl);
+                @include border-radius(100%);
+                @include mid(true);
+                @include transition(var(--duration));
+
+                &:hover,
+                &.--active {
+                    background: var(--main-cl);
+                }
+                &.--disable {
+                    background: rgba(255, 255, 255, 0.1);
+                    cursor: default;
+                    pointer-events: none;
+                    img {
+                        opacity: 0.2;
+                    }
+                }
+            }
+
+            &__prev {
+                margin-right: 12px;
+            }
+
+            &__next {
+                margin-left: 12px;
+            }
+
+            &__number {
+                color: var(--white-cl);
+                padding: 8px 12px;
+                @include transition(var(--duration));
+
+                &:hover,
+                &.--active {
+                    color: var(--main-cl);
+                }
+            }
+        }
+
+        @include xs {
+            &__tabs {
+                margin-top: 24px;
+            }
+        }
+
+        @include xxs {
+            padding-top: 80px;
+            .textbox {
+                text-align: center;
+            }
+            &__tabs {
+                flex-direction: column;
+                width: 100%;
+                li {
+                    width: 100%;
+                }
+            }
+            .thumb__list {
+                margin-top: 24px;
+            }
+            .pagination {
+                margin-top: 16px;
+                &__number {
+                    font-size: var(--fs-body-text-m);
+                    line-height: var(--lh-body-text-m);
+                }
+            }
+        }
+    }
+}
